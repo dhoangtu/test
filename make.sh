@@ -24,6 +24,9 @@ do
   rm -rf ${WORKING}/${folder}/${PDF_FOLDER}
   mkdir ${WORKING}/${folder}/${PDF_FOLDER}
   
+  # add content of index.html in each folder
+  cat ${folder}index.html >> ${LIST}
+  
   # scan each folder inside lilypond folder
   #cd ${folder}/${LY_FOLDER}
 
@@ -74,11 +77,11 @@ do
     
     echo "Song file: ${songfile}"
     # generate PDF file
-    #${LY_PATH} ${LY_OPTION} -o "${WORKING}/${folder}/${PDF_FOLDER}/${songfile}" ${lyfile}
+    #${LY_PATH} ${LY_OPTION} -o "${WORKING}${folder}${PDF_FOLDER}/${songfile}" ${lyfile}
     # use base name
-    ${LY_PATH} ${LY_OPTION} -o "${WORKING}/${folder}/${PDF_FOLDER}/${filename}" ${lyfile}
+    ${LY_PATH} ${LY_OPTION} -o "${WORKING}${folder}${PDF_FOLDER}/${filename}" ${lyfile}
     
-    echo "${song} <a href=\"${folder}/${PDF_FOLDER}/${songfile}.pdf\">PDF</a><br>" >> ${LIST}
+    echo "${song} <a href=\"${folder}${PDF_FOLDER}/${filename}.pdf\">PDF</a><br>" >> ${LIST}
     
     echo "======"
     
