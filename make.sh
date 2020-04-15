@@ -4,6 +4,7 @@ set +x
 # fix lilypond
 
 LY_CMD="/c/data/01.Software/lilypond-2.18.2/usr/bin/lilypond.exe"
+#LY_CMD="lilypond"
 #LY_CMD="/home/ubuntu/bin/lilypond"
 LY_OPTION="-dno-point-and-click --pdf"
 
