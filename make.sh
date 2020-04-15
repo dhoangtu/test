@@ -3,8 +3,8 @@ set +x
 
 # fix lilypond
 
-LY_PATH="/c/data/01.Software/lilypond-2.18.2/usr/bin/lilypond.exe"
-#LY_PATH="/home/ubuntu/bin/lilypond"
+LY_CMD="/c/data/01.Software/lilypond-2.18.2/usr/bin/lilypond.exe"
+#LY_CMD="/home/ubuntu/bin/lilypond"
 LY_OPTION="-dno-point-and-click --pdf"
 
 LY_FOLDER="lilypond"
@@ -77,9 +77,9 @@ do
     
     echo "Song file: ${songfile}"
     # generate PDF file
-    #${LY_PATH} ${LY_OPTION} -o "${WORKING}${folder}${PDF_FOLDER}/${songfile}" ${lyfile}
+    #${LY_CMD} ${LY_OPTION} -o "${WORKING}${folder}${PDF_FOLDER}/${songfile}" ${lyfile}
     # use base name
-    ${LY_PATH} ${LY_OPTION} -o "${WORKING}${folder}${PDF_FOLDER}/${filename}" ${lyfile}
+    ${LY_CMD} ${LY_OPTION} -o "${WORKING}$/{folder}${PDF_FOLDER}/${filename}" ${lyfile}
     
     echo "${song} <a href=\"${folder}${PDF_FOLDER}/${filename}.pdf\">PDF</a><br>" >> ${LIST}
     
