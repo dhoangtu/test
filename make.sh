@@ -79,7 +79,7 @@ do
     # generate PDF file
     #${LY_CMD} ${LY_OPTION} -o "${WORKING}${folder}${PDF_FOLDER}/${songfile}" ${lyfile}
     # use base name
-    ${LY_CMD} ${LY_OPTION} -o "${WORKING}$/{folder}${PDF_FOLDER}/${filename}" ${lyfile}
+    ${LY_CMD} ${LY_OPTION} -o "${WORKING}/${folder}${PDF_FOLDER}/${filename}" ${lyfile}
     
     echo "${song} <a href=\"${folder}${PDF_FOLDER}/${filename}.pdf\">PDF</a><br>" >> ${LIST}
     
