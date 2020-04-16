@@ -364,28 +364,28 @@ lyricsBasso = \lyricmode {
 {
   \transpose c a, {
     \new ChoirStaff <<
-      \new Staff \with { instrumentName = #"Soprano" shortInstrumentName = #"S." } << \global
+      \new Staff \with { instrumentName = #"Soprano" } << \global
       \new Voice="v1" {
         \clef violin
         \cantus }
       \new Lyrics \lyricsto "v1" {\lyricsSoprano }
       >>
 
-      \new Staff \with { instrumentName = #"Alto" shortInstrumentName = #"A." } << \global
+      \new Staff \with { instrumentName = #"Alto" } << \global
       \new Voice="v2" {
                     \clef violin
         \altus}
       \new Lyrics \lyricsto "v2" {\lyricsAlto }
       >>
 
-      \new Staff \with { instrumentName = #"Tenor" shortInstrumentName = #"T." } << \global
+      \new Staff \with { instrumentName = #"Tenor" } << \global
       \new Voice="v3" {
         \clef "G_8"
         \tenor }
       \new Lyrics \lyricsto "v3" {\lyricsTenor }
       >>
 
-      \new Staff \with { instrumentName = #"Bass" shortInstrumentName = #"B." } << \global
+      \new Staff \with { instrumentName = #"Bass" } << \global
       \new Voice="v4" {
         \clef bass
         \bassus }

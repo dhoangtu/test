@@ -376,19 +376,19 @@ lyricsBasso = \lyricmode {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score {
   \new ChoirStaff <<
-    \new Staff \with { instrumentName = #"Soprano" shortInstrumentName = #"S." } <<
+    \new Staff \with { instrumentName = #"Soprano" } <<
       \new Voice = "Soprano" { \clef treble \globalSettings \musicSoprano }
       \new Lyrics \lyricsto Soprano \lyricsSoprano
     >>
-    \new Staff \with { instrumentName = #"Alto" shortInstrumentName = #"A." } <<
+    \new Staff \with { instrumentName = #"Alto" } <<
       \new Voice = "Alto" { \clef treble \globalSettings \musicAlto }
       \new Lyrics \lyricsto Alto \lyricsAlto
     >>
-    \new Staff \with { instrumentName = #"Tenor" shortInstrumentName = #"T." } <<
+    \new Staff \with { instrumentName = #"Tenor" } <<
       \new Voice = "Tenor" { \clef "violin_8" \globalSettings \musicTenor }
       \new Lyrics \lyricsto Tenor \lyricsTenor
     >>
-    \new Staff \with { instrumentName = #"Bass" shortInstrumentName = #"B." } <<
+    \new Staff \with { instrumentName = #"Bass" } <<
       \new Voice = "Bass" { \clef bass \globalSettings \musicBasso }
       \new Lyrics \lyricsto Bass \lyricsBasso
     >>
