@@ -26,7 +26,7 @@
   top-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
-  indent = #0
+  %indent = #0
   print-page-number = ##f
   systems-per-page = #3
   system-system-spacing.basic-distance = #5

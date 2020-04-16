@@ -19,7 +19,7 @@
   bottom-margin = 20\mm
   left-margin = 20\mm
   right-margin = 20\mm
-  indent = 20\mm
+  %indent = 20\mm
   print-page-number = ##f
 
   ragged-bottom = ##f

@@ -18,7 +18,7 @@ global= {
 \paper {
   #(set-paper-size "a5")
   top-margin = 10\mm
-  bottom-margin = 10\mm
+  bottom-margin = 5\mm
   left-margin = 10\mm
   right-margin = 10\mm
   indent = #0

@@ -17,10 +17,10 @@ global= {
 
 \paper {
   #(set-paper-size "a4")
-  top-margin = 10\mm
-  bottom-margin = 10\mm
-  left-margin = 10\mm
-  right-margin = 10\mm
+  top-margin = 20\mm
+  bottom-margin = 20\mm
+  left-margin = 20\mm
+  right-margin = 20\mm
   indent = #0
   #(define fonts
 	 (make-pango-font-tree "Liberation Serif"
