@@ -3,6 +3,9 @@ Tham khảo:<br>
 <i>Reference:</i><br>
 <a href="https://musicasacra.com/music/english-hymns-in-the-commons/">Musica Sacra - Church Music Association of America</a><br>
 <a href="http://www2.cpdl.org/wiki/">Choral Public Domain Library</a><br>
+<a href="http://lilypond.org/">Lilypond</a><br>
+<a href="https://frescobaldi.org/">Frescobaldi (Lilypond Editor)</a><br>
+
 
 <br>
 Chúng tôi chân thành cảm ơn những tổ chức có bài hát được tập hợp ở đây. Mặc dù chúng tôi đã cố gắng tôn trọng bản quyền tác giả, nhưng có thể vẫn không tránh khỏi những sai sót. Chúng tôi chân thành cáo lỗi và sẽ chỉnh sửa nếu cần.<br>
