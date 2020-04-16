@@ -39,7 +39,7 @@ verseSettings = {
 \paper {
   #(set-paper-size "a4")
   top-margin = 5\mm
-  bottom-marign = 15\mm
+  bottom-margin = 15\mm
   left-margin = 20\mm
   right-margin = 20\mm
   %indent = #0
