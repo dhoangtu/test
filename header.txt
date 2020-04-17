@@ -9,6 +9,5 @@
 <h2>Thánh Ca Lilypond</h2>
 <h2><i>Hymns engraved by Lilypond</i></h2>
 Những bài hát này được tập hợp với mục đích hỗ trợ các cộng đoàn Công giáo ở Việt nam trong việc chọn lựa bài hát cho những cử hành phụng vụ.<br>
-<i>The songs here are collected with the aim of helping Vietnamese Catholic communities in finding songs for liturgical celebrations.</i><br>
-<br>
+<i>The songs here are collected with the aim of helping Vietnamese Catholic communities in finding songs for liturgical celebrations.</i>
 <br>
