@@ -17,8 +17,8 @@ global= {
 
 \paper {
   #(set-paper-size "a5")
-  top-margin = 10\mm
-  bottom-margin = 5\mm
+  top-margin = 2\mm
+  bottom-margin = 2\mm
   left-margin = 10\mm
   right-margin = 10\mm
   indent = #0
@@ -28,6 +28,7 @@ global= {
 			       "Liberation Serif"
 			       (/ 20 20)))
   system-system-spacing = #'((basic-distance . 3) (padding . 3))
+  page-count = 1
 }
 
 printItalic = \with {
