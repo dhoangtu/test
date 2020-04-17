@@ -1,17 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% CONTENTS OF THIS DOCUMENT
-% 1. Common settings
-% 2. Soprano verse music
-% 3. Alto verse music
-% 4. Tenor verse music
-% 5. Basso verse music
-% 6. Verse lyrics
-% 7. Layout
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 1. Common settings
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \version "2.18.2"
 
 \header {
@@ -46,9 +32,7 @@ printItalic = \with {
   \override LyricText.font-shape = #'italic
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 2. Soprano verse music
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Soprano verse music
 musicVerseSoprano = \relative c' {
   %{ 01 %} g'4 g bes g |
   %{ 02 %} g4. f8 f4 g |
@@ -60,9 +44,7 @@ musicVerseSoprano = \relative c' {
   %{ 08 %} g4. f8 ees2 \bar "|."
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 6. Verse lyrics
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Verse lyrics
 verseOne = \lyricmode {
   \set stanza = #"1."
   Word of God to earth de -- scend -- ing, with the Fa -- ther pres -- ent still,
@@ -87,9 +69,7 @@ verseFour = \lyricmode {
   Let us raise the loud ho -- san -- na, And a -- dor -- ing bend the knee.
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 7. Layout
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Layout
 \score {
     \new ChoirStaff <<
       \new Staff <<

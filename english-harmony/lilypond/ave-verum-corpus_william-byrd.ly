@@ -14,13 +14,12 @@
   print-first-page-number = ##t
   ragged-bottom = ##f
   ragged-last-bottom = ##t
-  myStaffSize = #35
 
   #(define fonts
       (make-pango-font-tree "Liberation Serif"
                             "Liberation Serif"
                             "Liberation Serif"
-                            (/ myStaffSize 40)))
+                            (/ 35 40)))
 
 
   top-margin = 20\mm
