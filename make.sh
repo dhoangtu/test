@@ -16,8 +16,11 @@ LIST=${WORKING}/list.txt
 HEADER=${WORKING}/header.txt
 FOOTER=${WORKING}/footer.txt
 HTML=${WORKING}/index.html
+README=${WORKING}/README/md
 
 rm -rf ${LIST}
+rm -rf ${HTML}
+rm -rf ${README}
 
 ls -d */ | while read folder
 do
@@ -80,9 +83,10 @@ do
     # generate PDF file
     #${LY_CMD} ${LY_OPTION} -o "${WORKING}${folder}${PDF_FOLDER}/${songfile}" ${lyfile}
     # use base name
-    ${LY_CMD} ${LY_OPTION} -o "${WORKING}/${folder}${PDF_FOLDER}/${filename}" ${lyfile}
+    echo "${LY_CMD} ${LY_OPTION} -o \"${WORKING}/${folder}${PDF_FOLDER}/${filename}\" ${lyfile}" >> gen.sh
     
-    echo "${song} <a href=\"${folder}${PDF_FOLDER}/${filename}.pdf\">PDF</a><br>" >> ${LIST}
+    echo "${songfile} <a href=\"${folder}${PDF_FOLDER}/${filename}.pdf\">PDF</a> - <a href=\"${folder}${LY_FOLDER}/${filename}.ly\"> Lilypond .ly</a><br>" >> ${LIST}
+    echo "${songfile} <a href=\"${folder}${PDF_FOLDER}/${filename}.pdf\">PDF</a> - <a href=\"${folder}${LY_FOLDER}/${lyfile}\"> LILYPOND</a><br>" >> ${README}
     
     echo "======"
     
@@ -91,3 +95,7 @@ done
 
 # add header and footer to form full html page
 cat ${HEADER} ${LIST} ${FOOTER} > ${HTML}
+
+# actually generate PDF from lilypond
+chmod a+x gen.sh
+#./gen.sh

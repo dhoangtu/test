@@ -12,7 +12,7 @@ Chúng tôi chân thành cảm ơn những tổ chức có bài hát được t�
 <i>We would like to appreciate the associations who have songs which are collected here. While every effort has been made to respect copyright as far as possible, it may be that some omissions or mistakes have been made unintentionally, for which we apologise. These will be corrected.</i><br>
 
 <br>
-2020 thanhcalilypond.net - license <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a><br>
+&copy;2020 thanhcalilypond.net - license <a href="https://creativecommons.org/publicdomain/zero/1.0/">Create Commons Zero v1.0</a><br>
 admin@thanhcalilypond.net
 </body>
 </html>
