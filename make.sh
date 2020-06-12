@@ -12,15 +12,23 @@ LY_FOLDER="lilypond"
 PDF_FOLDER="pdf"
 
 WORKING=$(pwd)
-LIST=${WORKING}/list.txt
-HEADER=${WORKING}/header.txt
-FOOTER=${WORKING}/footer.txt
-HTML=${WORKING}/index.html
-README=${WORKING}/README/md
+#LIST=${WORKING}/list.txt
+HEADER_HTML=${WORKING}/header.html
+FOOTER_HTML=${WORKING}/footer.html
+INDEX_HTML=${WORKING}/index.html
+HEADER_MD=${WORKING}/header.md
+FOOTER_MD=${WORKING}/footer.md
+README_MD=${WORKING}/README.md
+GENERATE=${WORKING}/gen.sh
 
-rm -rf ${LIST}
-rm -rf ${HTML}
+#rm -rf ${LIST}
+rm -rf ${INDEX_HTML}
 rm -rf ${README}
+rm -rf ${GENERATE}
+
+# init HTML, README.md
+cat ${HEADER_HTML} > ${INDEX_HTML}
+cat ${HEADER_MD} > ${README_MD}
 
 ls -d */ | while read folder
 do
@@ -29,7 +37,7 @@ do
   mkdir ${WORKING}/${folder}/${PDF_FOLDER}
   
   # add content of index.html in each folder
-  cat ${folder}index.html >> ${LIST}
+  cat ${folder}index.html >> ${INDEX_HTML}
   
   # scan each folder inside lilypond folder
   #cd ${folder}/${LY_FOLDER}
@@ -80,22 +88,21 @@ do
     #songfile=`echo ${songfile} | iconv -f UTF-8 -t ASCII//TRANSLIT`
     
     echo "Song file: ${songfile}"
-    # generate PDF file
-    #${LY_CMD} ${LY_OPTION} -o "${WORKING}${folder}${PDF_FOLDER}/${songfile}" ${lyfile}
-    # use base name
-    echo "${LY_CMD} ${LY_OPTION} -o \"${WORKING}/${folder}${PDF_FOLDER}/${filename}\" ${lyfile}" >> gen.sh
+    # add one command to process this ly later
+    echo "${LY_CMD} ${LY_OPTION} -o \"${WORKING}/${folder}${PDF_FOLDER}/${filename}\" ${lyfile}" >> ${GENERATE}
     
-    echo "${songfile} <a href=\"${folder}${PDF_FOLDER}/${filename}.pdf\">PDF</a> - <a href=\"${folder}${LY_FOLDER}/${filename}.ly\"> Lilypond .ly</a><br>" >> ${LIST}
-    echo "${songfile} <a href=\"${folder}${PDF_FOLDER}/${filename}.pdf\">PDF</a> - <a href=\"${folder}${LY_FOLDER}/${lyfile}\"> LILYPOND</a><br>" >> ${README}
+    echo "${songfile} <a href=\"${folder}${PDF_FOLDER}/${filename}.pdf\">PDF</a> - <a href=\"${folder}${LY_FOLDER}/${filename}.ly\"> Lilypond .ly</a><br>" >> ${INDEX_HTML}
+    echo "* ${songfile} [PDF](${folder}${PDF_FOLDER}/${filename}.pdf) - [LILYPOND](${folder}${LY_FOLDER}/${lyfile})" >> ${README_MD}
     
     echo "======"
     
   done
 done
 
-# add header and footer to form full html page
-cat ${HEADER} ${LIST} ${FOOTER} > ${HTML}
+# add footer to form full page
+cat ${FOOTER_HTML} >> ${INDEX_HTML}
+cat ${FOOTER_MD} >> ${README_MD}
 
 # actually generate PDF from lilypond
-chmod a+x gen.sh
-#./gen.sh
+chmod a+x ${GENERATE}
+#${GENERATE}
